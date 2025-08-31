@@ -50,6 +50,7 @@ button, a.btn{
     justify-content: center;
     font-size: larger;
     text-decoration: none;
+    cursor: pointer;
     &:hover{
         background-color: #eee;
         transition: 0.2s ease;
