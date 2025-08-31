@@ -7,28 +7,29 @@ const docs = [
     }
 ]
 
-docs.map((doc, index)=>{
+docs.map((doc, index) => {
     let item = document.createElement("div");
-    item.setAttribute("id", index)
+    item.setAttribute("id", index);
     item.className = "item";
     
-    item.innerHTML=`
-    <span class='item_info'>
-    <i class="ph ph-file"></i>
-    <a href="/${doc.url}" rel="noopener noreferrer" target="_blank">${doc.title}</a>
-    </span>
-    <button onclick="copyUrl('${doc.url}, ${index}');" id="copyBtn${index}"><i class="ph ph-copy"></i></button>
-    `
+    item.innerHTML = `
+        <span class='item_info'>
+            <i class="ph ph-file"></i>
+            <a href="/${doc.url}" rel="noopener noreferrer" target="_blank">${doc.title}</a>
+        </span>
+        <button onclick="copyUrl('${doc.url}', ${index});" id="copyBtn${index}">
+            <i class="ph ph-copy"></i>
+        </button>
+    `;
 
     list.appendChild(item);
-})
+});
 
-
-function copyUrl(url, index){
+function copyUrl(url, index) {
     navigator.clipboard.writeText(`https://docs.rondon39pr.org.br/${url}`);
     let btn = document.getElementById(`copyBtn${index}`);
-    btn.innerText = `<i class="ph ph-check"></i>`;
-    setInterval(() => {
-        btn.innerText = `<i class="ph ph-copy"></i>`;
+    btn.innerHTML = `<i class="ph ph-check"></i>`;
+    setTimeout(() => {
+        btn.innerHTML = `<i class="ph ph-copy"></i>`;
     }, 2000);
 }
