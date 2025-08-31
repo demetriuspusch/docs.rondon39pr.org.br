@@ -7,15 +7,6 @@ const docs = [
     }
 ]
 
-function copyUrl(url, index){
-    navigator.clipboard.writeText(url);
-    let btn = document.getElementById(`copyBtn${index}`);
-    btn.innerHTML = '<i class="ph ph-check"></i>';
-    setInterval(() => {
-        btn.innerHTML = '<i class="ph ph-copy"></i>';
-    }, 2000);
-}
-
 docs.map((doc, index)=>{
     let item = document.createElement("div");
     item.setAttribute("id", index)
@@ -31,3 +22,13 @@ docs.map((doc, index)=>{
 
     list.appendChild(item);
 })
+
+
+function copyUrl(url, index){
+    navigator.clipboard.writeText(`https://docs.rondon39pr.org.br/${url}`);
+    let btn = document.getElementById(`copyBtn${index}`);
+    btn.innerHTML = '<i class="ph ph-check"></i>';
+    setInterval(() => {
+        btn.innerHTML = '<i class="ph ph-copy"></i>';
+    }, 2000);
+}
