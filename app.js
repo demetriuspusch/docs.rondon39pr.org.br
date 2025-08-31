@@ -26,7 +26,7 @@ docs.map((doc, index)=>{
     <i class="ph ph-file"></i>
     <a href="/${doc.url}" rel="noopener noreferrer" target="_blank">${doc.title}</a>
     </span>
-    <button onclick="copyUrl('${doc.url}, ${index}')" id="copyBtn${index}"><i class="ph ph-copy"></i></button>
+    <button onClick="copyUrl('${doc.url}, ${index}')" id="copyBtn${index}"><i class="ph ph-copy"></i></button>
     `
 
     list.appendChild(item);
