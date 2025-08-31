@@ -22,10 +22,10 @@ docs.map((doc, index)=>{
     item.className = "item";
     
     item.innerHTML=`
-    <div class='item__info'>
+    <span class='item_info'>
     <i class="ph ph-file"></i>
     <a href="/${doc.url}" rel="noopener noreferrer" target="_blank">${doc.title}</a>
-    </div>
+    </span>
     <button onclick="copyUrl('${doc.url}, ${index}')" id="copyBtn${index}"><i class="ph ph-copy"></i></button>
     `
 

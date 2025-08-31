@@ -26,7 +26,7 @@ main{
         height: 40px;
         width: 100%;
         padding-inline: 10px;
-        .item__info{
+        span.item_info{
             display: flex;
             gap: 10px;
         }
