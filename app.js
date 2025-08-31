@@ -27,8 +27,8 @@ docs.map((doc, index)=>{
 function copyUrl(url, index){
     navigator.clipboard.writeText(`https://docs.rondon39pr.org.br/${url}`);
     let btn = document.getElementById(`copyBtn${index}`);
-    btn.innerText = '<i class="ph ph-check"></i>';
+    btn.innerText = `<i class="ph ph-check"></i>`;
     setInterval(() => {
-        btn.innerText = '<i class="ph ph-copy"></i>';
+        btn.innerText = `<i class="ph ph-copy"></i>`;
     }, 2000);
 }
