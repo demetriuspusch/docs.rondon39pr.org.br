@@ -15,7 +15,7 @@ docs.map((doc, index) => {
     item.innerHTML = `
         <span class='item_info'>
             <i class="ph ph-file"></i>
-            <a href="/${doc.url}" rel="noopener noreferrer" target="_blank">${doc.title}</a>
+            <a href="/assets/${doc.url}" rel="noopener noreferrer" target="_blank">${doc.title}</a>
         </span>
         <button onclick="copyUrl('${doc.url}', ${index});" id="copyBtn${index}">
             <i class="ph ph-copy"></i>
@@ -26,7 +26,7 @@ docs.map((doc, index) => {
 });
 
 function copyUrl(url, index) {
-    navigator.clipboard.writeText(`https://docs.rondon39pr.org.br/${url}`);
+    navigator.clipboard.writeText(`https://docs.rondon39pr.org.br/assets/${url}`);
     let btn = document.getElementById(`copyBtn${index}`);
     btn.innerHTML = `<i class="ph ph-check"></i>`;
     setTimeout(() => {
