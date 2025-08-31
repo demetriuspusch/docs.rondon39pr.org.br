@@ -34,7 +34,7 @@ main{
             }
         }
     }
-    @media (width<=400px){
+    @media (width<=800px){
         margin-inline: 20px;
     }
 }
