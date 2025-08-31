@@ -17,7 +17,8 @@ function copyUrl(url, index){
 }
 
 docs.map((doc, index)=>{
-    let item = document.createElement(`div#${index}`);
+    let item = document.createElement("div");
+    item.setAttribute("id", index)
     item.className = "item";
     
     item.innerHTML=`
