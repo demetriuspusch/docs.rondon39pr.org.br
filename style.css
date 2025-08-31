@@ -37,6 +37,11 @@ button, a.btn{
     border-radius: 30px;
     border: 1px solid #eee;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    text-decoration: none;
 }
 
 a{
